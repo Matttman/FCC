@@ -1,0 +1,126 @@
+:root {
+    --blue-gray: hsl(212, 10%, 20%);
+    --dark-gray: hsl(212, 10%, 5%);
+    --bg-blue: hsl(220, 30%, 30%);
+    --bg-red: hsl(352, 59%, 47%);
+    --view-height: 100vh;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(90deg, var(--blue-gray),var(--dark-gray));
+}
+
+a {
+    text-decoration: none;
+}
+#navbar {
+    position: fixed;
+    top: 0;
+    text-align: right;
+    height: 4rem;
+    width: 100%;
+    background-color: var(--bg-red);
+    z-index: 2;
+}
+
+.nav-link {
+    padding: 0 1rem;
+    line-height: 4rem;
+    font-size: 2rem;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: var(--view-height);
+}
+h1 {
+    font-size: 4em;
+}
+#welcome-section p{
+    color: var(--bg-red);
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 200;
+}
+
+#projects {
+    text-align: center;
+    background-color: var(--bg-blue);
+}
+
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+}
+
+.project-tile{
+    text-align: center;
+    max-width: 500px;
+    width: 40%;
+    margin: 2rem 0 2rem 0;
+}
+
+.project-desc {
+    font-size: 1.6em;
+    padding: 1em;
+    background-color: var(--blue-gray);
+}
+.code {
+    font-size: 1em;
+    color: var(--blue-gray);
+    transition: color 0.3s ease-out;
+}
+.project-tile:hover .code {
+    color: #ff7f50;
+}
+
+.project-image{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    .tiles {
+        display: flex;
+        flex-direction: column;
+    }
+    .project-tile {
+        width: 80%;
+    }
+}
+#profile {
+    height: var(--view-height);
+    background-color: var(--blue-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts a{
+    padding: 1rem;
+}
+.contacts span {
+    font-family: "Font Awesome 5 Free";
+    font-size: 2em;
+}
+
+.contacts {
+    margin: 4rem;
+}
+
